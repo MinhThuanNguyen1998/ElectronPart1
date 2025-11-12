@@ -81,7 +81,7 @@ public class TutorialUI : MonoBehaviour
         FocusHelper.SetupArrow(m_arrow, target, mainCamera, m_mainCanvas, m_arrowOffset, listObjectOnTop, listObjectOnDown, listObjectOnLeft, listObjectOnRight, this);
         FocusHelper.UpdateImage(m_focusedImage, target, mainCamera, m_mainCanvas, m_focusPadding);
         FocusHelper.PositionInfoPanel(m_infoObjectPanel, m_arrow, m_mainCanvas);
-        Debug.Log($"Step {currentStep}: {target.name}");
+        //Debug.Log($"Step {currentStep}: {target.name}");
         return currentStep;
     }
     private int EndTutorial()
