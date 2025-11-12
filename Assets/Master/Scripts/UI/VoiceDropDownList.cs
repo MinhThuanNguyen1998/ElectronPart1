@@ -1,15 +1,16 @@
 using System;
+using Michsky.MUIP;
 using TMPro;
 using UnityEngine;
 
 public class VoiceDropDownList : MonoBehaviour
 {
-    [SerializeField] private TMP_Dropdown m_DropDownVoice;
+    [SerializeField] private CustomDropdown m_DropDownVoice;
     public static int CurrentVoiceIndex { get; private set; }
     private void Start()
     {
         m_DropDownVoice.onValueChanged.AddListener(OnChangeVoice);
-        CurrentVoiceIndex = m_DropDownVoice.value;
+        CurrentVoiceIndex = m_DropDownVoice.index;
     }
     private void Destroy()
     {

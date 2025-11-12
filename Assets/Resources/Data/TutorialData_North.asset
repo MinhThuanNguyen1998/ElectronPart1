@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b80a441b91204334dabc962a8fa7417e, type: 3}
+  m_Name: TutorialData_North
+  m_EditorClassIdentifier: 
+  m_data:
+  - buttonName: Menu
+    buttonContent: "N\xFAt tr\u1EDF v\u1EC1 menu ch\xEDnh c\u1EE7a ph\u1EA7n m\u1EC1m"
+    buttonAudio: {fileID: 8300000, guid: 5406b3de98b06294cb29dcb7777932d8, type: 3}
+  - buttonName: "Ki\u1EC3m tra"
+    buttonContent: "N\xFAt ki\u1EC3m tra c\u1EA5u h\xECnh nguy\xEAn t\u1EED"
+    buttonAudio: {fileID: 8300000, guid: 1ca619b1d0c510e4f8239a6c20723a5c, type: 3}
+  - buttonName: "H\u01B0\u1EDBng d\u1EABn"
+    buttonContent: "N\xFAt hi\u1EC3n th\u1ECB c\xE1c b\u01B0\u1EDBc c\u1EE7a ph\u1EA7n
+      m\u1EC1m"
+    buttonAudio: {fileID: 8300000, guid: f8f72069b42d9ca438f24f1e14ce3d36, type: 3}
+  - buttonName: "L\xFD thuy\u1EBFt"
+    buttonContent: "N\xFAt hi\u1EC3n th\u1ECB b\u1EA3ng tu\u1EA7n ho\xE0n h\xF3a
+      h\u1ECDc"
+    buttonAudio: {fileID: 8300000, guid: e17332284dc2dfc4da18b164964277e2, type: 3}
+  - buttonName: "S\u1ED1 l\u1EDBp v\u1ECF"
+    buttonContent: "\xD4 nh\u1EADp s\u1ED1 l\u1EDBp v\u1ECF"
+    buttonAudio: {fileID: 8300000, guid: b0b4ca4aba064cb44ac03dc551631c15, type: 3}
+  - buttonName: "S\u1ED1 electron"
+    buttonContent: "\xD4 nh\u1EADp s\u1ED1 electron"
+    buttonAudio: {fileID: 8300000, guid: bcef5d19775e2e5499e2d20799f2381f, type: 3}
+  - buttonName: "Ch\u1EBF \u0111\u1ED9 g\u1EE3i \xFD"
+    buttonContent: "N\xFAt \u0111\u1EC3 b\u1EADt ch\u1EBF \u0111\u1ED9 g\u1EE3i \xFD"
+    buttonAudio: {fileID: 8300000, guid: 3f255b21d87512246a2939d9b32e3785, type: 3}
+  - buttonName: Electron
+    buttonContent: "Nh\u1EA5n chu\u1ED9t v\xE0o icon electron \u0111\u1EC3 k\xE9o
+      v\xE0 th\u1EA3 v\xE0o t\u1EEBng l\u1EDBp v\u1ECF"
+    buttonAudio: {fileID: 8300000, guid: bf0421014cf4b6e4baee3c9650b2a472, type: 3}
