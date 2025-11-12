@@ -16,6 +16,9 @@ MonoBehaviour:
   - buttonName: Menu
     buttonContent: "N\xFAt tr\u1EDF v\u1EC1 menu ch\xEDnh c\u1EE7a ph\u1EA7n m\u1EC1m"
     buttonAudio: {fileID: 8300000, guid: f25967226e070f340a5fc96541a04bca, type: 3}
+  - buttonName: "\u0110\u1ED5i m\xE0u Electron"
+    buttonContent: "N\xFAt \u0111\u1ED5i m\xE0u electron"
+    buttonAudio: {fileID: 8300000, guid: f4388c69ee703bd4483216ffe2813ac5, type: 3}
   - buttonName: "Ki\u1EC3m tra"
     buttonContent: "N\xFAt ki\u1EC3m tra c\u1EA5u h\xECnh nguy\xEAn t\u1EED"
     buttonAudio: {fileID: 8300000, guid: dbe016bac04c36640ae8279b42cebe2a, type: 3}
