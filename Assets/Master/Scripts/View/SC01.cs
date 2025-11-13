@@ -22,6 +22,7 @@ public class SC01 : MonoBehaviour
         m_InputFieldRingCount.onEndEdit.AddListener(OnRingCountChanged);
         ResetInputFielData();
         ActiveElectronInputFields(false);
+        AudioMainManager.Instance.StopLoop();
        
     }
     private void OnDisable()
