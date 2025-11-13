@@ -10,15 +10,19 @@ public class SC01 : MonoBehaviour
 {
     [SerializeField] private TMP_InputField m_InputFieldRingCount;
     [SerializeField] private List<GameObject> m_ListGameObjectElectronCount;
+    [SerializeField] private GroupButtonManage m_GroupButtonManage;
     public static event Action<int> OnRingCountUpdated;
     public static event Action OnUnActiveGroupRing;
     public static event Action<bool> OnUnActiveAtomicGroup;
     public static event Action<int> OnGotoState;
+
+
     private void OnEnable()
     {
         m_InputFieldRingCount.onEndEdit.AddListener(OnRingCountChanged);
         ResetInputFielData();
-        ActiveElectronInputFields(false); 
+        ActiveElectronInputFields(false);
+       
     }
     private void OnDisable()
     {
@@ -34,8 +38,8 @@ public class SC01 : MonoBehaviour
             {
                 UpdateElectronInputFields(Count);
                 OnRingCountUpdated?.Invoke(Count);
-                //StepTutorialManager.Instance.GotoState(1);
                 OnGotoState?.Invoke(1);
+                m_GroupButtonManage.InteractiveButtonChangeColor(true);
                 
             }
             else
@@ -43,10 +47,11 @@ public class SC01 : MonoBehaviour
                 PopUpManager.Instance.ShowPopUp(PopupType.Notification, Config.Text_InValid_Value, Config.Button_Yes, null);
                 ResetInputFielData();
                 OnRingCountUpdated?.Invoke(0);
-                //StepTutorialManager.Instance.GotoState(0);
                 OnGotoState?.Invoke(0);
+                m_GroupButtonManage.InteractiveButtonChangeColor(false);
             }
         }
+        
     }
     private void UpdateElectronInputFields(int count)
     {
@@ -60,13 +65,12 @@ public class SC01 : MonoBehaviour
     {
         foreach (var gameObjectElectron in m_ListGameObjectElectronCount) gameObjectElectron.gameObject.SetActive(isActive);
     }
-
     private void ResetInputFielData()
     { 
         m_InputFieldRingCount.text = string.Empty;
         UpdateElectronInputFields(0);
         OnUnActiveGroupRing?.Invoke();
         OnUnActiveAtomicGroup?.Invoke(false);
-
     }
+   
 }

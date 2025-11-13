@@ -2,6 +2,8 @@
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine.InputSystem.LowLevel;
+using static UnityEditorInternal.VersionControl.ListControl;
+using System.Collections;
 public class GroupButtonManage : MonoBehaviour
 {
     [Header("Groups")]
@@ -24,9 +26,10 @@ public class GroupButtonManage : MonoBehaviour
     [Header("Button Sprites")]
     [SerializeField] private Sprite m_SpriteNormal;
     [SerializeField] private Sprite m_SpritePressed;
+    [SerializeField] private Sprite m_SpriteUnInteractable;
     [SerializeField] private Image m_ButtonStepImage;
     [SerializeField] private Image m_ButtonChangeImage;
-
+    private bool m_LastState;
     private void Awake()
     {
         HideAllGroups();
@@ -36,11 +39,25 @@ public class GroupButtonManage : MonoBehaviour
         }
         m_ButtonStep.onClick.AddListener(() => ToggleGroup(m_GroupStep));
         m_ButtonChangeColor.onClick.AddListener(() => ToggleGroup(m_GroupChangeColor));
-
         m_ButtonCloseGroupStep.onClick.AddListener(() => HideGroup(m_GroupStep));
         m_ButtonHint.onClick.AddListener(() => HideGroup(m_GroupStep));
         m_ButtonHint.onClick.AddListener(() => HideGroup(m_GroupChangeColor));
         m_ButtonCloseGroupCheckStep.onClick.AddListener(() => HideGroup(m_GroupCheckStep));
+    }
+    private void Start()
+    {
+        m_LastState = m_ButtonChangeColor.interactable;
+        StartCoroutine(CheckInteractableChange());
+    }
+    private IEnumerator CheckInteractableChange()
+    {
+        while (true)
+        {
+            yield return new WaitUntil(() => m_ButtonChangeColor.interactable != m_LastState);
+            m_LastState = m_ButtonChangeColor.interactable;
+            HideGroup(m_GroupChangeColor);
+            m_ButtonChangeImage.sprite = m_SpriteNormal;
+        }
     }
     private void HideAllGroups()
     {
@@ -53,27 +70,26 @@ public class GroupButtonManage : MonoBehaviour
         if (group != null)
         {
             group.SetActive(false);
-            if (group == m_GroupStep && m_ButtonStepImage != null)
-                m_ButtonStepImage.sprite = m_SpriteNormal;
-
-            if (group == m_GroupChangeColor && m_ButtonChangeImage != null)
-                m_ButtonChangeImage.sprite = m_SpriteNormal;
+            if (group == m_GroupStep && m_ButtonStepImage != null) m_ButtonStepImage.sprite = m_SpriteNormal;
+            if (group == m_GroupChangeColor && m_ButtonChangeImage != null) m_ButtonChangeImage.sprite = m_SpriteNormal;
+            
         }
     }
     private void ToggleGroup(GameObject group)
     {
         if (group == null) return;
-
         bool newState = !group.activeSelf;
-
         HideAllGroups();
         group.SetActive(newState);
-
         if (group == m_GroupStep && m_ButtonStepImage != null)
             m_ButtonStepImage.sprite = newState ? m_SpritePressed : m_SpriteNormal;
-
         if (group == m_GroupChangeColor && m_ButtonChangeImage != null)
             m_ButtonChangeImage.sprite = newState ? m_SpritePressed : m_SpriteNormal;
     }
+    public void InteractiveButtonChangeColor(bool isInteractable) 
+    {
+        m_ButtonChangeColor.interactable = isInteractable;
+    } 
+   
 }
 

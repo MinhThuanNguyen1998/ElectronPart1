@@ -21,16 +21,6 @@ public class StepTutorialManager : MonoBehaviour
     private float _DelayShowTutorialIcon = 0f;
     private bool IsFirstTimeShowTutorial = true;
 
-    //private void OnEnable()
-    //{
-    //    SC01.OnGotoState += GotoState;
-    //    ElementChecker.OnGotoState += GotoState;
-    //}
-    //private void OnDisable()
-    //{
-    //    SC01.OnGotoState -= GotoState;
-    //    ElementChecker.OnGotoState -= GotoState;
-    //}
     private void Start()
     {
         SC01.OnGotoState += GotoState;

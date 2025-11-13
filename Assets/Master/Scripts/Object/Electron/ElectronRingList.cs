@@ -23,14 +23,18 @@ public class ElectronRingList : MonoBehaviour
     }
     private void Start() => UnActiveGroup();
     public void UpdateRingList(int count)
-    {   
+    {
         if (count > 0)
         {
             SetActive(m_ListElectron_Text, true);
             for (int i = 0; i < m_ListImages.Count; i++)
                 m_ListImages[i].gameObject.SetActive(i < count);
         }
-        else SetActive(m_ListElectron_Text, false);
+        else 
+        {
+            SetActive(m_ListElectron_Text, false);
+        }
+        
     }
     public void UnActiveGroup()
     {
