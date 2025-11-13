@@ -255,6 +255,10 @@ PrefabInstance:
       propertyPath: m_Value
       value: 1.0000005
       objectReference: {fileID: 0}
+    - target: {fileID: 1834318095296517995, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
+      propertyPath: m_Spacing
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 1891828847313352614, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_text
       value: "<color=#FBEF00>B\u01B0\u1EDBc 2:</color> Nh\u1EADp s\u1ED1 electron
@@ -17881,6 +17885,10 @@ PrefabInstance:
     - target: {fileID: 1296004279742425807, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_Value
       value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834318095296517995, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
+      propertyPath: m_Spacing
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1891828847313352614, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_text
