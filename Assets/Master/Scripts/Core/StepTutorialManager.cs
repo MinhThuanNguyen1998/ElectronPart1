@@ -35,6 +35,7 @@ public class StepTutorialManager : MonoBehaviour
     }
     public void GotoState(int state)
     {
+        if (!isActiveAndEnabled || this == null || gameObject == null) return;
         if (state == _currentState) return;
         ChangeState(state);
     }
