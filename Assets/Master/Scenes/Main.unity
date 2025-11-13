@@ -712,7 +712,6 @@ GameObject:
   - component: {fileID: 9587825}
   - component: {fileID: 9587824}
   - component: {fileID: 9587823}
-  - component: {fileID: 9587827}
   m_Layer: 5
   m_Name: Button_ChangeColor
   m_TagString: Untagged
@@ -835,19 +834,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9587820}
   m_CullTransparentMesh: 1
---- !u!114 &9587827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9587820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92e0f603593060b48a6d5d02c7a2d4ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ButtonChangeColor: {fileID: 9587824}
 --- !u!1 &10634693
 GameObject:
   m_ObjectHideFlags: 0
@@ -12013,7 +11999,6 @@ MonoBehaviour:
   m_ButtonHint: {fileID: 8405046585015517806}
   m_SpriteNormal: {fileID: 21300000, guid: 36b498a3690f18b48ab07653188e5099, type: 3}
   m_SpritePressed: {fileID: 21300000, guid: 18f038c9620b09741a3a9f12f6cb98ad, type: 3}
-  m_SpriteUnInteractable: {fileID: 21300000, guid: 86b083352f306bb4f96448d85c9e1a12, type: 3}
   m_ButtonStepImage: {fileID: 1429104725}
   m_ButtonChangeImage: {fileID: 9587825}
 --- !u!1 &1198437895

@@ -26,14 +26,13 @@ public class GroupButtonManage : MonoBehaviour
     [Header("Button Sprites")]
     [SerializeField] private Sprite m_SpriteNormal;
     [SerializeField] private Sprite m_SpritePressed;
-    [SerializeField] private Sprite m_SpriteUnInteractable;
     [SerializeField] private Image m_ButtonStepImage;
     [SerializeField] private Image m_ButtonChangeImage;
     private bool m_LastState;
     private void Awake()
     {
         HideAllGroups();
-        foreach (var btn in m_ListButtonFunction)
+        foreach (var btn in m_ListButtonFunction) 
         {
             btn.onClick.AddListener(HideAllGroups);
         }
@@ -44,6 +43,8 @@ public class GroupButtonManage : MonoBehaviour
         m_ButtonHint.onClick.AddListener(() => HideGroup(m_GroupChangeColor));
         m_ButtonCloseGroupCheckStep.onClick.AddListener(() => HideGroup(m_GroupCheckStep));
     }
+    private void OnEnable() => InteractiveButtonChangeColor(false);
+
     private void Start()
     {
         m_LastState = m_ButtonChangeColor.interactable;
