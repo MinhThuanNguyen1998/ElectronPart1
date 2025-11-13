@@ -11017,6 +11017,7 @@ GameObject:
   - component: {fileID: 1084655018}
   - component: {fileID: 1084655017}
   - component: {fileID: 1084655016}
+  - component: {fileID: 1084655019}
   m_Layer: 5
   m_Name: GroupChangeColor
   m_TagString: Untagged
@@ -11130,8 +11131,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7f7bf995d8f4ffc489061658bbbe371d, type: 3}
   - {fileID: 21300000, guid: 70f194dd3b5bc754d9a1153445b604f4, type: 3}
   startingColor: {r: 1, g: 1, b: 1, a: 1}
-  staticMode: 0
-  multiInstance: 1
+  staticMode: 1
+  multiInstance: 0
   onColorChange:
     m_PersistentCalls:
       m_Calls: []
@@ -11196,6 +11197,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084655014}
   m_CullTransparentMesh: 0
+--- !u!114 &1084655019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084655014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b753d4b0c7d210741bad8be4ade6c9c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ColorPicker: {fileID: 1084655016}
 --- !u!1 &1098186837
 GameObject:
   m_ObjectHideFlags: 0
@@ -14602,7 +14616,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92e0f603593060b48a6d5d02c7a2d4ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ButtonChangeColor: {fileID: 9587824}
 --- !u!1 &1439524096
 GameObject:
   m_ObjectHideFlags: 0
