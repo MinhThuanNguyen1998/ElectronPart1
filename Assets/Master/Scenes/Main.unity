@@ -25410,8 +25410,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "M\xD4 H\xCCNH C\u1EA4U T\u1EA0O NGUY\xCAN T\u1EEC \nC\u1EE6A C\xC1C NGUY\xCAN
-    T\u1ED0"
+  m_text: "X\xC2Y D\u1EF0NG M\xD4 H\xCCNH C\u1EA4U T\u1EA0O NGUY\xCAN T\u1EEC \nC\u1EE6A
+    C\xC1C NGUY\xCAN T\u1ED0"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7362f3990db07954a9570669bf1a5bdd, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 7362f3990db07954a9570669bf1a5bdd, type: 2}
