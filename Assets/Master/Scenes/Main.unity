@@ -22615,7 +22615,7 @@ GameObject:
   - component: {fileID: 225407548656306206}
   - component: {fileID: 95934310456967872}
   m_Layer: 5
-  m_Name: Style 2
+  m_Name: PopUpExitApp
   m_TagString: Untagged
   m_Icon: {fileID: 2800000, guid: 443b1643bec077e478f70a7a0fd1adcd, type: 3}
   m_NavMeshLayer: 0
