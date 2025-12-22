@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using static Unity.Burst.Intrinsics.X86;
+
 public enum SoundType
 {
     Button,

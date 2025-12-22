@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
-using UnityEngine.InputSystem.LowLevel;
-using static UnityEditorInternal.VersionControl.ListControl;
 using System.Collections;
 public class GroupButtonManage : MonoBehaviour
 {
