@@ -19,6 +19,5 @@ public class VoiceDropDownList : MonoBehaviour
     private void OnChangeVoice(int index)
     {
         CurrentVoiceIndex = index;
-      
     }
 }
